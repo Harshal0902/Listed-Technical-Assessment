@@ -36,12 +36,12 @@ export default function Register() {
                     <div className='px-4 md:px-0 text-3xl md:text-4xl font-montserrat font-[900]'>Register</div>
                     <div className='px-4 md:px-0 text-md font-[400] font-lato tracking-wide md:py-2'>Register to your account</div>
                     <div className="md:flex grid place-items-center items-center justify-center md:space-x-1 space-y-2 md:space-y-0 md:justify-between py-2">
-                        <button onClick={() => handleGoogleLogin()} className="flex items-center space-x-2 text-[#858585] bg-white px-4 py-2 text-[12px] leading-[14.63px] rounded-[10px]">
-                            <Image src="/google-icon.svg" alt="google" width={16} height={16} />
+                        <button onClick={() => handleGoogleLogin()} className="flex items-center space-x-2 text-[#858585] bg-white px-4 py-3 text-[12px] leading-[14.63px] rounded-[10px]">
+                            <Image src="/google-icon.svg" alt="google" width={14} height={14} />
                             <span className='tracking-wide font-montserrat'>Sign in with Google</span>
                         </button>
-                        <button className="flex items-center space-x-2 text-[#858585] bg-white px-4 py-2 text-[12px] leading-[14.63px] rounded-[10px]">
-                            <Image src="/apple-icon.svg" alt="apple" width={16} height={16} />
+                        <button className="flex items-center space-x-2 text-[#858585] bg-white px-4 py-3 text-[12px] leading-[14.63px] rounded-[10px]">
+                            <Image src="/apple-icon.svg" alt="apple" width={14} height={14} />
                             <span className='tracking-wide font-montserrat'>Sign in with Apple</span>
                         </button>
                     </div>
