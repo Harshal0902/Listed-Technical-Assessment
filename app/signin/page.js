@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useEffect } from "react"
-import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 import { signIn, useSession } from 'next-auth/react'
@@ -17,35 +16,35 @@ export default function Login() {
     password: ''
   })
 
-  useEffect(() => {
-    if (session?.status === 'authenticated') {
-      router.push('/')
-    }
-  })
+  // useEffect(() => {
+  //   if (session?.status === 'authenticated') {
+  //     router.push('/')
+  //   }
+  // })
 
-  const loginUser = async (e) => {
-    e.preventDefault()
-    signIn('credentials',
-      {
-        ...data, redirect: false
-      })
-      .then((callback) => {
-        if (callback?.error) {
-          toast.error(callback.error)
-        }
+  const handleGoogleLogin = () => {
+    signIn("google", { callbackUrl: "/" });
+  };
 
-        if (callback?.ok && !callback?.error) {
-          toast.success('Logged in successfully!')
-        }
-      })
-  }
+  // const loginUser = async (e) => {
+  //   e.preventDefault()
+  //   signIn('credentials',
+  //     {
+  //       ...data, redirect: false
+  //     })
+  //     .then((callback) => {
+  //       if (callback?.error) {
+  //         toast.error(callback.error)
+  //       }
+
+  //       if (callback?.ok && !callback?.error) {
+  //         toast.success('Logged in successfully!')
+  //       }
+  //     })
+  // }
 
   return (
     <div className='md:grid md:grid-cols-5 h-screen font-montserrat bg-[#F5F5F5]'>
-
-      <Head>
-        <title>Sign in | Listed Frontend Developer Task</title>
-      </Head>
 
       <div className='col-span-2 bg-black flex justify-center items-center text-3xl md:text-6xl font-bold text-white leading-loose'>Board.</div>
 
@@ -54,7 +53,7 @@ export default function Login() {
           <div className='text-2xl md:text-4xl font-bold '>Sign In</div>
           <div className='text-lg font-lato tracking-wide md:py-2'>Sign in to your account</div>
           <div className="md:flex items-center justify-center space-y-2 md:space-y-0 md:justify-between md:space-x-2 py-2">
-            <button onClick={() => signIn('google')} className="flex items-center space-x-4 text-[#858585] bg-white px-8 py-2 text-md rounded-2xl">
+            <button onClick={() => handleGoogleLogin()} className="flex items-center space-x-4 text-[#858585] bg-white px-8 py-2 text-md rounded-2xl">
               <Image src="/google-icon.svg" alt="google" width={20} height={20} />
               <span className='tracking-wide font-montserrat'>Sign in with Google</span>
             </button>
