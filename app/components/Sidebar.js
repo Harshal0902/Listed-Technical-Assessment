@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { signOut, useSession } from "next-auth/react";
+import { useSession } from "next-auth/react";
 import { useRouter } from 'next/navigation';
 import Link from "next/dist/client/link";
 import { HiX } from "react-icons/hi";
@@ -17,18 +17,12 @@ export default function Navbar() {
 
   const [isOpen, setIsOpen] = useState(false);
 
-  const toggleSidebar = () => {
-    console.log(isOpen);
-    setIsOpen(!isOpen);
-  };
-
-  const router = useRouter();
   const { data: session } = useSession();
 
   return (
     <div className="relative">
       {session && (
-        <div className="md:absolute md:px-4 md:py-8 py-4 px-8">
+        <div className="md:absolute md:p-4 lg:p-8 py-4 px-10">
 
           <nav className="md:w-[280px] md:bg-black rounded-2xl md:p-8">
             <div className="hidden md:block text-white font-montserrat font-bold text-[36px] text-center md:text-left">Board.</div>
@@ -40,9 +34,9 @@ export default function Navbar() {
             {isOpen ? (
               <div>
                 <motion.div variants={fade} initial="hidden" animate="visible" className="flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none md:hidden">
-                  <div className="relative -left-9 top-0 mx-auto w-[80vw]">
+                  <div className="ml-0 w-[300px]">
                     <div className="border-0 rounded-r-3xl shadow-lg relative flex flex-col w-full bg-black outline-none focus:outline-none">
-                      <div className="flex items-start justify-between p-4 border-solid rounded-t">
+                      <div className="flex items-start justify-between py-4 pl-4 border-solid rounded-t">
                         <div>
                           <div className="text-3xl pl-4 font-base font-extrabold cursor-pointer text-white font-montserrat">
                             Board.
@@ -55,7 +49,7 @@ export default function Navbar() {
 
                       </div>
 
-                      <div className="flex justify-between flex-col px-8 w-auto pt-4 h-[78vh]">
+                      <div className="flex justify-between flex-col py-8 pl-8 w-auto pt-4 h-[78vh]">
 
                         <div className="flex-col space-y-6 ml-0 w-auto flex h-auto" >
                           <Link href="/">

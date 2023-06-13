@@ -16,13 +16,14 @@ export default function Home() {
   return (
     <div>
       {session && (
-        <main className="relative">
-          <div className="md:absolute left-[320px] mt-6 md:mt-0 top-10 bg-red-500">
+        <main className="relative px-4">
+          <div className="md:absolute md:left-[320px] md:flex md:justify-between md:items-center lg:left-[360px] mt-6 md:pr-8 lg:mt-24 w-full md:w-[65vw] lg:w-[75vw]">
             Hello World!
             <button onClick={() => signOut()}>Sign Out</button>
           </div>
         </main>
-      )}
-    </div>
+      )
+      }
+    </div >
   );
 }

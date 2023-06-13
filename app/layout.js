@@ -2,7 +2,8 @@ import './globals.css'
 import { Inter } from 'next/font/google'
 import Provider from './context/AuthContext'
 import ToasterContext from './context/ToasterContext'
-import Sidebar from './components/Sidebar'
+import Sidebar from './components/sidebar'
+import Header from './components/header'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -18,6 +19,7 @@ export default function RootLayout({ children }) {
         <Provider>
           <ToasterContext />
           <Sidebar />
+          <Header />
           {children}
         </Provider>
       </body>
