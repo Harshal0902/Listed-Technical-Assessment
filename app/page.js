@@ -5,18 +5,13 @@ import { useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 
 export default function Home() {
-  const { data: session } = useSession()
-  const router = useRouter()
-
-  useEffect(() => {
-    if (!session) {
-      router.push('/signin')
-    }
-  }, [session, router])
-
-  if (!session) {
-    return null
-  }
+  const router = useRouter();
+  const { status } = useSession({
+    required: true,
+    onUnauthenticated() {
+      router.push("/signin");
+    },
+  });
 
   return (
     <div>

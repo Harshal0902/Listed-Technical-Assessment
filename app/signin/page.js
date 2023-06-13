@@ -64,7 +64,7 @@ export default function Login() {
             </button>
           </div>
 
-          <form className='lg:w-[33rem] bg-white rounded-3xl px-4 md:px-12 py-6 mt-6 flex flex-col'>
+          <form onSubmit={loginUser} className='lg:w-[33rem] bg-white rounded-3xl px-4 md:px-12 py-6 mt-6 flex flex-col'>
             <div className='text-lg font-lato tracking-wide'>Email address</div>
             <input className='rounded-lg bg-[#F5F5F5] px-4 py-2 focus:outline-none border-none' type='email' value={data.email}
               onChange={e => setData({ ...data, email: e.target.value })}
