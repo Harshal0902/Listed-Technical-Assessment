@@ -52,18 +52,18 @@ export default function Register() {
                     <form className='lg:w-[33rem] bg-white rounded-3xl px-4 md:px-12 py-6 mt-6 flex flex-col' onSubmit={registerUser}>
                         <div className='text-lg font-lato tracking-wide'>Username</div>
                         <input className='rounded-lg bg-[#F5F5F5] px-4 py-2 focus:outline-none border-none' type='text' required
-                    value={data.name}
-                    onChange={e => setData({ ...data, name: e.target.value })} placeholder='Enter your Username' />
+                            value={data.name}
+                            onChange={e => setData({ ...data, name: e.target.value })} placeholder='Enter your Username' />
 
                         <div className='text-lg font-lato tracking-wide'>Email address</div>
                         <input className='rounded-lg bg-[#F5F5F5] px-4 py-2 focus:outline-none border-none' type='email' required
-                    value={data.email}
-                    onChange={e => setData({ ...data, email: e.target.value })} placeholder='Enter your email' />
+                            value={data.email}
+                            onChange={e => setData({ ...data, email: e.target.value })} placeholder='Enter your email' />
 
                         <div className='text-lg font-lato tracking-wide mt-4'>Password</div>
                         <input className='rounded-lg bg-[#F5F5F5] px-4 py-2 focus:outline-none border-none' type='password' required
-                    value={data.password}
-                    onChange={e => setData({ ...data, password: e.target.value })} placeholder='Enter your password' />
+                            value={data.password}
+                            onChange={e => setData({ ...data, password: e.target.value })} placeholder='Enter your password' />
 
                         <div className='text-lg font-lato tracking-wide mt-4'>Confirm Password</div>
                         <input className='rounded-lg bg-[#F5F5F5] px-4 py-2 focus:outline-none border-none' type='password' placeholder='Enter your password once again' />
