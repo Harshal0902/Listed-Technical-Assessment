@@ -3,9 +3,9 @@
 import { useState } from "react"
 import axios from "axios"
 import { toast } from "react-hot-toast"
-import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
+import { signIn, useSession } from 'next-auth/react'
 
 export default function Register() {
 
@@ -15,6 +15,10 @@ export default function Register() {
         password: ''
     })
 
+    const handleGoogleLogin = () => {
+        signIn("google", { callbackUrl: "/" });
+    };
+
     const registerUser = async (e) => {
         e.preventDefault()
         axios.post('/api/register', data)
@@ -23,33 +27,26 @@ export default function Register() {
     }
 
     return (
-        <div className='md:grid md:grid-cols-5 h-screen font-montserrat'>
-
-            <Head>
-                <title>Register | Listed Frontend Developer Task</title>
-                <meta name="description" content="Created by Harshal Raikwar" />
-                <meta name="viewport" content="width=device-width, initial-scale=1" />
-                <link rel="icon" href="/favicon.ico" />
-            </Head>
+        <div className='md:grid md:grid-cols-5 h-screen font-montserrat bg-[#F5F5F5]'>
 
             <div className='col-span-2 bg-black flex justify-center items-center text-3xl md:text-6xl font-bold text-white leading-loose'>Board.</div>
 
-            <div className='col-span-3 bg-[#F5F5F5] flex justify-center items-center'>
+            <div className='col-span-3 flex justify-center items-center'>
                 <div className='p-8'>
-                    <div className='text-2xl md:text-4xl font-bold '>Register</div>
-                    <div className='text-lg font-lato tracking-wide md:py-2'>Register to your account</div>
-                    {/* <div className="md:flex items-center justify-center space-y-2 md:space-y-0 md:justify-between md:space-x-2 py-2">
-                        <button className="flex items-center space-x-4 text-[#858585] bg-white px-8 py-2 text-md rounded-2xl">
-                            <Image src="/google-icon.svg" alt="google" width={20} height={20} />
-                            <span className='tracking-wide font-montserrat'>Register with Google</span>
+                    <div className='px-4 md:px-0 text-3xl md:text-4xl font-montserrat font-[900]'>Register</div>
+                    <div className='px-4 md:px-0 text-md font-[400] font-lato tracking-wide md:py-2'>Register to your account</div>
+                    <div className="md:flex grid place-items-center items-center justify-center md:space-x-1 space-y-2 md:space-y-0 md:justify-between py-2">
+                        <button onClick={() => handleGoogleLogin()} className="flex items-center space-x-2 text-[#858585] bg-white px-4 py-2 text-[12px] leading-[14.63px] rounded-[10px]">
+                            <Image src="/google-icon.svg" alt="google" width={16} height={16} />
+                            <span className='tracking-wide font-montserrat'>Sign in with Google</span>
                         </button>
-                        <button className="flex items-center space-x-4 text-[#858585] bg-white px-10 py-2 text-md rounded-2xl">
-                            <Image src="/apple-icon.svg" alt="apple" width={20} height={20} />
-                            <span className='tracking-wide font-montserrat'>Register with Apple</span>
+                        <button className="flex items-center space-x-2 text-[#858585] bg-white px-4 py-2 text-[12px] leading-[14.63px] rounded-[10px]">
+                            <Image src="/apple-icon.svg" alt="apple" width={16} height={16} />
+                            <span className='tracking-wide font-montserrat'>Sign in with Apple</span>
                         </button>
-                    </div> */}
+                    </div>
 
-                    <form className='lg:w-[33rem] bg-white rounded-3xl px-4 md:px-12 py-6 mt-6 flex flex-col' onSubmit={registerUser}>
+                    <form className='lg:w-[385px] bg-white rounded-2xl px-4 md:px-10 md:py-8 py-6 mt-6 flex flex-col' onSubmit={registerUser}>
                         <div className='text-lg font-lato tracking-wide'>Username</div>
                         <input className='rounded-lg bg-[#F5F5F5] px-4 py-2 focus:outline-none border-none' type='text' required
                             value={data.name}
