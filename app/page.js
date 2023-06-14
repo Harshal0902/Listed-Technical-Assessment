@@ -11,7 +11,7 @@ import style from './globals.css'
 
 async function getChartsData() {
   try {
-    const response = await axios.get(`${process.env.NEXTAUTH_URL}/api`);
+    const response = await axios.get("/api");
     return response.data;
   } catch (error) {
     console.error('Error fetching charts data:', error);
@@ -141,7 +141,7 @@ export default function Home() {
                       return (
                         <div key={index} className="flex mb-3">
                           <div
-                          // {skill.name == "React Js" ? 'animate-spin-slow w-[5.5rem] h-[5.5rem]' : 'w-[5.5rem] h-[5.5rem]'} 
+                            // {skill.name == "React Js" ? 'animate-spin-slow w-[5.5rem] h-[5.5rem]' : 'w-[5.5rem] h-[5.5rem]'} 
                             className={item.title == "Meeting with suppliers from Kuta Bali" ? "bg-[#9BDD7C] w-1 mr-4 " : "bg-[#6972C3] w-1 mr-4"}
                           ></div>
                           <div className="font-lato text-xs font-normal text-gray-500">
