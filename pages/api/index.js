@@ -155,6 +155,75 @@ const data = {
             status: "pending",
         }
     ],
+    scheduleData: [
+        {
+            id: 1,
+            time: '09:00 AM',
+            event: 'Meeting',
+            location: 'Conference Room A',
+        },
+        {
+            id: 2,
+            time: '11:00 AM',
+            event: 'Presentation',
+            location: 'Auditorium',
+        },
+        {
+            id: 3,
+            time: '02:00 PM',
+            event: 'Workshop',
+            location: 'Training Room B',
+        },
+        {
+            id: 4,
+            time: '04:00 PM',
+            event: 'Meeting',
+            location: 'Conference Room A',
+        },
+        {
+            id: 5,
+            time: '06:00 PM',
+            event: 'Presentation',
+            location: 'Auditorium',
+
+        },
+        {
+            id: 6,
+            time: '08:00 PM',
+            event: 'Workshop',
+            location: 'Training Room B',
+        },
+        {
+            id: 7,
+            time: '10:00 PM',
+            event: 'Meeting',
+            location: 'Conference Room A',
+        },
+        {
+            id: 8,
+            time: '12:00 PM',
+            event: 'Presentation',
+            location: 'Auditorium',
+        },
+        {
+            id: 9,
+            time: '02:00 AM',
+            event: 'Workshop',
+            location: 'Training Room B',
+        },
+        {
+            id: 10,
+            time: '04:00 AM',
+            event: 'Meeting',
+            location: 'Conference Room A',
+        },
+        {
+            id: 11,
+            time: '06:00 AM',
+            event: 'Presentation',
+            location: 'Auditorium',
+        },
+    ]
 };
 
 export default function handler(req, res) {
