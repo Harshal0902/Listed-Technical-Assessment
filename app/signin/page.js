@@ -23,7 +23,7 @@ export default function Login() {
   // })
 
   const handleGoogleLogin = () => {
-    signIn("google", { callbackUrl: "/" });
+    signIn("google", { callbackUrl: "/dashboard" });
   };
 
   // const loginUser = async (e) => {

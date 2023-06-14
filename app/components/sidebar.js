@@ -52,8 +52,8 @@ export default function Navbar() {
                       <div className="flex justify-between flex-col py-8 pl-8 w-auto pt-4 h-[78vh]">
 
                         <div className="flex-col space-y-6 ml-0 w-auto flex h-auto" >
-                          <Link href="/">
-                            <div className={`flex content-center text-white ${path === "/" && "font-[700]"}`}>
+                          <Link href="/dashboard">
+                            <div className={`flex content-center text-white ${path === "/dashboard" && "font-[700]"}`}>
                               <Image src="/dashboard_icon.svg" alt="dashboard_icon" width={15} height={15} />
                               <p className="font-montserrat ml-4 text-[18px]">Dashboard</p>
                             </div>
@@ -113,8 +113,8 @@ export default function Navbar() {
             <div className="hidden w-full md:flex md:justify-between md:flex-col md:w-auto pt-12 md:h-[105vh]" >
 
               <div className="md:flex-col md:space-y-6 md:ml-0 md:w-auto flex flex-col md:h-auto" >
-                <Link href="/">
-                  <div className={`flex content-center text-white ${path === "/" && "font-[700]"}`}>
+                <Link href="/dashboard">
+                  <div className={`flex content-center text-white ${path === "/dashboard" && "font-[700]"}`}>
                     <Image src="/dashboard_icon.svg" alt="dashboard_icon" width={15} height={15} />
                     <p className="font-montserrat ml-4 text-[18px]">Dashboard</p>
                   </div>

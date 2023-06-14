@@ -1,7 +1,7 @@
 "use client"
 
 import React, { useState } from "react";
-import { useRouter } from 'next/navigation';
+import { useRouter, usePathname } from 'next/navigation';
 import { useSession, signOut } from "next-auth/react";
 import { BiSearch } from 'react-icons/bi';
 import Image from 'next/image';
@@ -10,20 +10,15 @@ export default function Header() {
 
     const [isDropdownOpen, setDropdownOpen] = useState(false);
 
-    const handleAvatarClick = () => {
-        setDropdownOpen(!isDropdownOpen);
-    };
-
     const handleLogout = () => {
         signOut();
     };
 
 
     const router = useRouter();
-    const { pathname } = router;
     const { data: session } = useSession();
 
-    const trimmedPathname = (pathname || '/dashboard').substring(1);
+    const trimmedPathname = usePathname().substring(1);
 
     return (
         <div>

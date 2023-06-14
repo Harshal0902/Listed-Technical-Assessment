@@ -7,7 +7,7 @@ const data = {
         {
             name: "Week 1",
             user: 420,
-            guest: 460,
+            guest: 380,
         },
         {
             name: "Week 2",
@@ -53,6 +53,64 @@ const data = {
             title: "Check operation at Giga Factory 1",
             time: "18.00-20.00",
             venue: "at Central Jakarta",
+        },
+    ],
+    transactions: [
+        {
+            id: 1,
+            date: "2023-05-17",
+            description: "Payment from John Doe",
+            amount: 1000,
+            status: "completed",
+        },
+        {
+            id: 2,
+            date: "2023-05-16",
+            description: "Payment from Jane Smith",
+            amount: 2500,
+            status: "completed",
+        },
+        {
+            id: 3,
+            date: "2023-05-15",
+            description: "Payment from Alex Johnson",
+            amount: 500,
+            status: "pending",
+        },
+        {
+            id: 4,
+            date: "2023-05-15",
+            description: "Payment from Johnn",
+            amount: 500,
+            status: "pending",
+        },
+        {
+            id: 5,
+            date: "2023-05-15",
+            description: "Payment from Mary",
+            amount: 500,
+            status: "pending",
+        },
+        {
+            id: 6,
+            date: "2023-05-15",
+            description: "Payment from Johnn",
+            amount: 500,
+            status: "pending",
+        },
+        {
+            id: 7,
+            date: "2023-05-15",
+            description: "Payment from Mary",
+            amount: 500,
+            status: "pending",
+        },
+        {
+            id: 8,
+            date: "2023-05-15",
+            description: "Payment from Johnn",
+            amount: 500,
+            status: "pending",
         },
     ],
 };

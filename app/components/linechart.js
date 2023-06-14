@@ -1,4 +1,4 @@
-import { ResponsiveContainer, LineChart, Line, CartesianGrid, XAxis, YAxis } from "recharts";
+import { ResponsiveContainer, LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip } from "recharts";
 
 export default function Linehart({ data }) {
     return (
@@ -14,7 +14,7 @@ export default function Linehart({ data }) {
                     tickLine={false}
                     ticks={[0, 100, 200, 300, 400, 500]}
                 />
-
+                <Tooltip />
                 <Line dot={false} type="monotone" dataKey="guest" strokeWidth={3} stroke="#E9A0A0" />
                 <Line dot={false} type="monotone" dataKey="user" strokeWidth={3} stroke="#9BDD7C" />
             </LineChart>
