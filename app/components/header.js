@@ -23,14 +23,14 @@ export default function Header() {
     const { pathname } = router;
     const { data: session } = useSession();
 
-    const trimmedPathname = (pathname || '/Dashboard').substring(1);
+    const trimmedPathname = (pathname || '/dashboard').substring(1);
 
     return (
         <div>
             {session && (
                 <main className="relative px-4">
                     <div className="md:absolute md:left-[320px] md:flex md:justify-between md:items-center lg:left-[360px] mt-6 md:pr-8 lg:mt-8 w-full md:w-[65vw] lg:w-[75vw]">
-                        <div className='font-montserrat text-[24px] font-[700]'>
+                        <div className='font-montserrat text-[24px] font-[700] capitalize'>
                             {trimmedPathname}
                         </div>
 

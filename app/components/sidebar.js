@@ -33,9 +33,9 @@ export default function Navbar() {
 
             {isOpen ? (
               <div>
-                <motion.div variants={fade} initial="hidden" animate="visible" className="flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none md:hidden">
+                <motion.div variants={fade} initial="hidden" animate="visible" className="ml-3 py-4 flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none md:hidden">
                   <div className="ml-0 w-[300px]">
-                    <div className="border-0 rounded-r-3xl shadow-lg relative flex flex-col w-full bg-black outline-none focus:outline-none">
+                    <div className="border-0 rounded-xl shadow-lg relative flex flex-col w-full bg-black outline-none focus:outline-none">
                       <div className="flex items-start justify-between py-4 pl-4 border-solid rounded-t">
                         <div>
                           <div className="text-3xl pl-4 font-base font-extrabold cursor-pointer text-white font-montserrat">
@@ -110,7 +110,7 @@ export default function Navbar() {
               </div>
             ) : null}
 
-            <div className="hidden w-full md:flex md:justify-between md:flex-col md:w-auto pt-12 md:h-[100vh]" >
+            <div className="hidden w-full md:flex md:justify-between md:flex-col md:w-auto pt-12 md:h-[105vh]" >
 
               <div className="md:flex-col md:space-y-6 md:ml-0 md:w-auto flex flex-col md:h-auto" >
                 <Link href="/">
