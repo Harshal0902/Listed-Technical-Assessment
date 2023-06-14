@@ -15,8 +15,8 @@ export default function Linehart({ data }) {
                     ticks={[0, 100, 200, 300, 400, 500]}
                 />
                 <Tooltip />
-                <Line dot={false} type="monotone" dataKey="guest" strokeWidth={3} stroke="#E9A0A0" />
-                <Line dot={false} type="monotone" dataKey="user" strokeWidth={3} stroke="#9BDD7C" />
+                <Line dot={false} type="monotone" dataKey="Guest" strokeWidth={3} stroke="#E9A0A0" />
+                <Line dot={false} type="monotone" dataKey="User" strokeWidth={3} stroke="#9BDD7C" />
             </LineChart>
         </ResponsiveContainer>
     );
